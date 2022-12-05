@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="./Login.css">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css.map">
+    <link rel="stylesheet" href="./style.scss">
+</head>
+
+<body>
+    <div class="parent">
+        <form action="javascript:void(0);" class="login">
+            <div class="login-field">
+                <i class="fa-solid fa-user login-icon"></i>
+                <input id="userName" type="text" class="login-input" placeholder="             Username" value="admin">
+            </div>
+
+            <div class="login-field">
+                <i class="fa fa-lock login-icon"></i>
+                <input id="password" type="password" class="login-input" placeholder="             Password" required value="1">
+
+            </div>
+            <button type="submit" class="login-icon buttonIcon" onclick="handleLogin()">Login</button>
+        </form>
+    </div>
+    <script src="./mainlogin.js"></script>
+ 
+</body>
+
+</html>
