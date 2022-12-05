@@ -1,0 +1,73 @@
+
+    html {
+      font-family: Times New Roman;
+      display: inline-block;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.3rem;
+    }
+
+    p {
+      font-size: 2.0rem;
+    }
+
+    body {
+      max-width: 400px;
+      margin: 0px auto;
+      padding-bottom: 25px;
+    }
+
+    .slider {
+      -webkit-appearance: none;
+      margin: 14px;
+      width: 360px;
+      height: 25px;
+      background: #b4b1b1;
+      border-radius: 50px;
+      outline: none;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 35px;
+      height: 35px;
+      background: #01070a;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .slider::-moz-range-thumb {
+      width: 35px;
+      height: 35px;
+      background: #01070a;
+      cursor: pointer;
+    }
+
+    #rotate_03 {
+      display: flex;
+      justify-content: center;
+      /* position: fixed;  */
+      width: 20rem;
+      height: 20rem;
+      margin: 0px 0 0 30px;
+      animation-name: spin;
+      animation-duration: 0s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  
