@@ -1,78 +1,240 @@
-html {
-  font-size: 62.5%;
-  font-family: "Poppins", sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+.parent{
+    /* display: flex; */
+    /* width: 100%; */
+    position: relative;
+    /* height: 100%; */
+}
+.trapezoid {
+    display: inline-block;;
+    /* flex-direction: column; */
+    border-bottom: 100vh solid rgb(237, 72, 72);
+    border-left: 80vh solid transparent;
+    border-right: 0px solid transparent;
+    /* margin-left: 13rem; */
+    height: 0px;
+    width: 48rem;
+    position: absolute;;
+    right: 0;
+    text-align: center;
+
+  }
+  .logo img{
+    display: block;
+    width: 20rem;
+    position: absolute;
+    top: 70px;
+    left: 70px;
+  }
+  .span1{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    display: block;
+    width: 52%;
+    background-color: aliceblue;
+    height: 2px;
+    /* margin-top: 25px; */
+    /* padding-left: 20px; */
+  }
+  .span2{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    display: block;
+    width: 2px;
+    background-color: aliceblue;
+    height: 93vh;
+  }
+  .span3{
+    position: absolute;
+    top: 689px;
+    right: 25px;
+    display: block;
+    width: 90%;
+    background-color: aliceblue;
+    height: 2px;
+    /* margin-top: 25px; */
+    /* padding-left: 20px; */
+  }
+.trapezoid h1{
+    font-size: 5rem;
+    font-weight: 600;
+    color: #ffff;
+    text-align: center;
+    line-height: 250px
+}
+.trapezoid span{
+    left: 115px;
+    position: absolute;
+    display: block;
+    width: 70%;
+    background-color: aliceblue;
+    height: 4px;
+    top: 180px;
+}
+.trapezoid h3{
+    font-size: 3rem;
+    font-weight: 400;
+    color: #ffff;
+    text-align: center;
+    /* line-height: -20px; */
+    margin-top: -40px;
+    padding: 0;
 }
 
-* {
-  box-sizing: border-box;
+
+form{
+    position: absolute;
+    top: 300px;
+    right: 180px;
+
+    width: 35vw;
+    height: 30vh;
+    background-color: hwb(24deg 84% 2%);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
-body {
-  background-color: #e5eaf5;
+  
+  .login-field {
+    display: flex;
+    align-items: center;
+    background-color: hwb(24deg 68% 3%);
+    /* padding: 15px; */
+    /* width: 70%; */
+    height: 45px;
+    border-radius: 10px;
+    
+   
+    /* margin-left: 25px; */
+    /* margin-right: 40px; */
+    /* line-height: 45px; */
+  }
+  
+  .login-icon {
+    color: #344667;
+    font-size: 16px;
+    width: 45px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: hwb(24deg 51% 4%);
+    height: 45px;
+    line-height: 43px;
+    
+  }
+  
+  .login-input {
+    border: 0;
+    padding-left: 15px;
+    background-color: hwb(24deg 68% 3%);
+    outline: none;
+    /* font-family: "Poppins", sans-serif; */
+    width: 70%;
+    font-size: 30px;
+  }
+  .test{
+    display: flex;
+    /* justify-content: space-between; */
+    /* gap: 40px; */
+  }
+  .buttonIcon {
+    width: 100px;
+    border: none;
+    font-size: 30px;
+    font-weight: 600;
+    color: #757575;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: hwb(24deg 51% 4%);
+  }
+  .buttonIcon:focus {
+    outline: 0 !important;
 }
 
-.login {
-  width: 300px;
-  margin: 50px auto;
-  background-color: white;
-  border-radius: 20px;
-  padding: 30px;
+.text{
+  right: 60px;
+  top: 10px;
+  position: relative;
 }
 
-.login-field {
-  display: flex;
-  align-items: center;
-  background-color: #f2f7ff;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+
+@media only screen and (max-width: 927px) {
+  .trapezoid {
+  
+    width: 30rem;
+   
+  }
+  .logo img{
+    width: 12rem;
+    top: 40px;
+    left: 45px;
+  }
+  .span3{
+    top: 400px;
+    right: 25px;
+    width: 84%;
+  }
+  .span2{
+    
+    top: 25px;
+    right: 25px;
+    
+    width: 2px;
+    
+    height: 88vh;
+  }
+  .trapezoid h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 157px;
 }
 
-.login-icon {
-  color: #344667;
-  font-size: 16px;
-  width: 20px;
-  text-align: center;
-}
 
-.login-input {
-  border: 0;
-  padding-left: 15px;
-  background-color: transparent;
-  outline: none;
-  font-family: "Poppins", sans-serif;
-  width: 100%;
+.trapezoid span {
+    left: 93px;
+    width: 60%;
+    top: 110px;
+}
+.trapezoid h3 {
+  font-size: 1.5rem;
+  margin-top: -33px;
+}
+form{
+  top: 200px;
+  right: 120px;
+  row-gap: 10px;
+  height: 35vh;
+}
+.login-field{
+  height: 30px;
+  width: 80%;
+}
+.login-input{
+  font-size: 20px;
+}
+.login-icon{
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
   font-size: 12px;
 }
-.login-input::-webkit-input-placeholder {
-  color: #90a8cc;
+.buttonIcon{
+  font-size: 20px;
+  padding: 3px;
+  border-radius: 5px;
 }
-.login-input::-moz-input-placeholder {
-  color: #90a8cc;
+.text{
+  right: 40px;
+  top: 10px;
+  position: relative;
 }
-
-.login-submit {
-  color: white;
-  border-radius: 10px;
-  display: block;
-  width: 100%;
-  padding: 15px 10px;
-  border: 0;
-  background-color: #435ebe;
-  font-family: "Poppins", sans-serif;
-  font-size: 12px;
-  cursor: pointer;
-  outline: none;
 }
-
-.login-forgot-password {
-  text-decoration: none;
-  display: block;
-  text-align: right;
-  margin-bottom: 20px;
-  color: #3b4c6b;
-  font-weight: 600;
-  font-size: 13px;
-}
-
-/*# sourceMappingURL=style.css.map */

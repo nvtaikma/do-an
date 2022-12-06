@@ -2,17 +2,18 @@ let getID = (id) =>{
     return document.getElementById(id);
 }
 
-const userName = getID('userName').value;
-console.log(userName);
-const password = getID('password').value;
-console.log(password);
+const userName = getID('userName');
+// console.log(userName);
+const password = getID('password');
+// console.log(password);
 
 function handleLogin(){
-    if(userName == "admin" && password == "1"){
-        alert("Please enter");
+    console.log("userName", userName.value);
+    if(userName.value === "admin" && password.value === "12"){
+        alert("Login successful");
         return window.location.href = "./controlDC/controlDC.html";
     }else{
-        alert("sai tkmk")
+        alert("Login failed");
     }
 
 }
