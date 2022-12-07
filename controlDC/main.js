@@ -14,11 +14,10 @@ firebase.initializeApp(firebaseConfig);
   
 var slider = document.getElementById("pwmSlider");
 var dataSlider = document.getElementById("textslider_value")
-
 var database = firebase.database();
 database.ref().on("value", function(snap){      
-    slider.value = snap.val().ValueSlider;           //get value blueValue from firebase and store to  sliderBlue.value
-	dataSlider.innerHTML = snap.val().ValueSlider;  //get value blueValue from firebase and store to  SelectValueBlue.innerHTML	
+  //   slider.value = snap.val().ValueSlider;           
+	// dataSlider.innerHTML = snap.val().ValueSlider; 	
 });
 
 slider.oninput = function(){
@@ -57,3 +56,26 @@ function updateSliderPWM(element) {
   }
 //   document.getElementById("rotate_03").style.animationDuration = '0.' + slider_value + 's';
 }
+
+const checked = () => {
+  if (document.getElementById("checkbox").checked == true) {
+    console.log("true")
+    document.getElementById("slider-data").style.display = "block";
+    var value = document.getElementById("pwmSlider").value;
+    var dataSlider = document.getElementById("textslider_value")
+    dataSlider.innerHTML = value;
+
+    console.log(value);
+    
+  } else {
+    console.log("false");
+    document.getElementById("slider-data").style.display = "none"
+    var value = document.getElementById("pwmSlider").value = 0;
+    document.getElementById("rotate_03").style.animationDuration = "0s";
+    // set lai value
+    var firebaseRef = firebase.database().ref().child("ValueSlider");         
+    firebaseRef.set(0);  
+
+  }
+}
+
