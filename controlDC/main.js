@@ -16,8 +16,8 @@ var slider = document.getElementById("pwmSlider");
 var dataSlider = document.getElementById("textslider_value")
 var database = firebase.database();
 database.ref().on("value", function(snap){      
-  //   slider.value = snap.val().ValueSlider;           
-	// dataSlider.innerHTML = snap.val().ValueSlider; 	
+    slider.value = snap.val().ValueSlider;           
+	dataSlider.innerHTML = snap.val().ValueSlider; 	
 });
 
 slider.oninput = function(){
