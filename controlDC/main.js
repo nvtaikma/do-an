@@ -1,13 +1,13 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyBsnfJiKhpUv9bsW-mxCkpTka2pmmtAvrs",
-    authDomain: "doan1-1b8c9.firebaseapp.com",
-    databaseURL: "https://doan1-1b8c9-default-rtdb.firebaseio.com",
-    projectId: "doan1-1b8c9",
-    storageBucket: "doan1-1b8c9.appspot.com",
-    messagingSenderId: "500104821890",
-    appId: "1:500104821890:web:67d401cccdc16c27f9c89b",
-    measurementId: "G-24HSN7ESEW"
-  };
+  apiKey: "AIzaSyBff79i61SirEwTjiUcL8fNa1z6dYPpk_I",
+  authDomain: "web-doan2.firebaseapp.com",
+  databaseURL: "https://web-doan2-default-rtdb.firebaseio.com",
+  projectId: "web-doan2",
+  storageBucket: "web-doan2.appspot.com",
+  messagingSenderId: "1024016029409",
+  appId: "1:1024016029409:web:4d3421e0116c6c24f009a0",
+  measurementId: "G-K8T6STMNS9"
+};
   
   // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -23,7 +23,7 @@ database.ref().on("value", function(snap){
 slider.oninput = function(){
     dataSlider.innerHTML = this.value; /* able to change the value*/
     var firebaseRef = firebase.database().ref().child("ValueSlider");         
-    firebaseRef.set(slider.value);           
+    firebaseRef.set(Number(slider.value));           
 }
 
 
@@ -74,7 +74,7 @@ const checked = () => {
     document.getElementById("rotate_03").style.animationDuration = "0s";
     // set lai value
     var firebaseRef = firebase.database().ref().child("ValueSlider");         
-    firebaseRef.set(0);  
+    firebaseRef.set(Number(0));  
 
   }
 }
